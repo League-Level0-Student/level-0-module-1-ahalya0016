@@ -10,8 +10,10 @@ import javax.swing.JApplet;
 import org.jointheleague.graphical.robot.Robot;
 
 public class RobotInSpace implements KeyEventDispatcher {
-
-	Robot rob = new Robot("mini");
+public static void main(String[] args) {
+	
+}
+{Robot r2d2 = new Robot("mini");}
 
 	/*
 	 * Make the Robot move around the screen when the arrow keys are pressed...
@@ -52,7 +54,7 @@ public class RobotInSpace implements KeyEventDispatcher {
 		KeyboardFocusManager.getCurrentKeyboardFocusManager().addKeyEventDispatcher(this);
 		Robot.setWindowImage("planet.jpg");
 		rob.penUp();
-		rob.setSpeed(10);
+		rob.setSpeed(10); 
 	}
 
 	public boolean dispatchKeyEvent(KeyEvent e) {
