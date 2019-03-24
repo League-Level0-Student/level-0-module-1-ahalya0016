@@ -10,10 +10,11 @@ import javax.swing.JApplet;
 import org.jointheleague.graphical.robot.Robot;
 
 public class RobotInSpace implements KeyEventDispatcher {
-public static void main(String[] args) {
+
 	
-}
-{Robot r2d2 = new Robot("mini");}
+
+Robot rob = new Robot("mini");
+private void moveRobot(int keyPressed) throws InterruptedException {
 
 	/*
 	 * Make the Robot move around the screen when the arrow keys are pressed...
@@ -23,11 +24,30 @@ public static void main(String[] args) {
 	 * not add code here - go to step 2
 	 */
 
-	private void moveRobot(int keyPressed) throws InterruptedException {
+	
 		// 2. Print out the keyPressed variable and write down the numbers for
 		// each arrow key
-
+System.out.println(keyPressed);
 		// 3. If the up arrow is pressed, move the Robot up the screen.
+if (keyPressed == (38)) {
+	rob.setAngle(0);
+	rob.microMove(1);
+	}
+if (keyPressed == (40)) {
+	rob.setAngle(180);	
+	rob.microMove(1);
+		}
+
+if (keyPressed == (37)) {
+	rob.setAngle(270);	
+	rob.microMove(1);
+}
+	
+	if (keyPressed == (39)) {
+		rob.setAngle(90);	
+		rob.microMove(1);}
+
+	
 
 		// 4. If the down arrow is pressed, move the Robot down.
 
