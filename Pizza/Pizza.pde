@@ -1,5 +1,11 @@
+import ddf.minim.*;
+Minim minim;
+AudioPlayer sound;
+
 void setup() {
-    size(500, 500);}
+    size(500, 500);
+  minim = new Minim(this);
+sound = minim.loadFile("ding.wav");}
     void draw() {
     background(200, 200, 200); 
     
@@ -24,5 +30,8 @@ image(mushroom,270,180);
 
  if (mousePressed)
 { image(mushroom,mouseX,mouseY);
-
+sound.play();
+sound.rewind();
     }}
+    
+   
